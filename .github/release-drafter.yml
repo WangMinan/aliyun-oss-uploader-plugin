@@ -1,0 +1,2 @@
+_extends: .github
+tag-template: aliyun-oss-uploader-plugin-test-$NEXT_MINOR_VERSION

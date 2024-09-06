@@ -1,0 +1,32 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:entry title="${%EndPoint}" field="endPoint">
+        <f:textbox placeholder="e.g.oss-cn-hangzhou.aliyuncs.com"/>
+    </f:entry>
+    <f:entry title="${%StsUrl}" field="stsUrl">
+        <f:textbox />
+    </f:entry>
+    <f:entry title="${%AccessKeyId}" field="accessKeyId">
+        <f:textbox />
+    </f:entry>
+    <f:entry title="${%AccessKeySecret}" field="accessKeySecret">
+        <f:password />
+    </f:entry>
+    <f:entry title="${%BucketName}" field="bucketName">
+        <f:textbox placeholder="e.g.examplebucket"/>
+    </f:entry>
+    <f:entry title="${%LocalPath}" field="localPath">
+        <f:textbox placeholder="e.g.D:\test.txt"/>
+    </f:entry>
+    <f:entry title="${%RemotePath}" field="remotePath">
+        <f:textbox placeholder="e.g.exampledir/exampleobject.txt"/>
+    </f:entry>
+    <f:advanced title="${%AdvancedUploadSettings}">
+        <f:entry title="${%PartSize}" field="partSize">
+            <f:number min="1" default="1"/>
+        </f:entry>
+        <f:entry title="${%TaskNum}" field="taskNum">
+            <f:number min="1" default="4"/>
+        </f:entry>
+    </f:advanced>
+</j:jelly>
